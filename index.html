@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puchong Perdana</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="aboutus.html" target="_blank">
+            <img src="picture/banner.jpg" alt="banner">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="background.html">Background</a>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="citycouncil.html">City Council</a>
+                </div>
+            </li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="attraction.html">Attraction</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>        
+    </nav>
+    <section>
+        <h1>Welcome to Puchong Perdana!</h1>
+        <br>
+        <video width="550px" height="500px" controls>
+            <source src="video/indexvid.mp4" type="video/mp4">
+        </video>
+    </section> 
+
+    <section>
+        <h2>Places to Visit in Puchong Perdana</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="picture/kompleks.png" style="width:100%">
+              <div class="text">Kompleks Puchong Perdana</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="picture/masjid.jpg" style="width:100%">
+              <div class="text">Masjid As-Salam (Masjid Terapung Puchong Perdana)</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="picture/tasik.jpg" style="width:100%">
+              <div class="text">Taman Tasik Puchong Perdana</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            </section>
+    <footer>
+        <p>&copy;2024. All rights reserved.<br>
+            This website was developed for the purpose of learning HTML & CSS only.<br>
+            Recommended web browser - Google Chrome, Mozilla Firefox & Microsoft Edge.<br>
+            Resolution 1920 x 1080.<br>
+            Last updated January 2024.</p>
+    </footer>
+</body>
+</html>

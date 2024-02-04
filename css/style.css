@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, serif;
+}
+header {
+    background-color: #FCE681;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+img{
+    box-align: center;
+    max-width:100%;
+    max-height: 100%;
+    min-width: 100%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set to three equal columns */
+    gap: 10px;
+    padding: 20px;
+}
+
+
+.gallery img {
+    width: 100%; /* Make the image take 100% of its container's width */
+    height: 100%; /* Make the image take 100% of its container's height */
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heron {
+    width: 40%; /* Make the image take 100% of its container's width */
+    height: 100%; /* Make the image take 100% of its container's height */
+    object-fit: scale-down; /* Ensure the image covers the container while maintaining aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.MBSJ {
+    width: 50%; /* Make the image take 100% of its container's width */
+    height: 50%; /* Make the image take 100% of its container's height */
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+
+nav {
+    background-color: #4CA64C;
+    color: white;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    text-decoration-thickness: 2px;
+    color: #fff;
+}
+
+/* Dropdown container */
+.dropdown {
+position: relative;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+top: 100%; /* Position the dropdown below the parent */
+left: 0; /* Align the dropdown with the left edge */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #4CA64C;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CA64C;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+}
+
+section video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border: 6px solid #FCE681;
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    color: #4CA64C;
+    text-align: center;
+    margin-bottom: 0px; 
+    font-family: Arial, sans-serif; 
+    font-weight: bold;
+  }
+
+* {box-sizing: border-box}
+body {font-family: Cambria, sans-serif; margin:0}
+.mySlides {display: none}
+img {
+    vertical-align: middle;
+    height: 250px;
+    width: 200px;
+    border: 10px solid #FCE681;
+    border-radius: 5px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #FCE681;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4CA64C;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.column {
+    flex-basis: calc(50% - 40px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #FCE681;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.column p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.column a {
+    display: block;
+    text-decoration: none;
+    color: #4CA64C;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.column a:hover {
+    background-color: #4CA64C;
+    color: white;
+}
+
+.accordion {
+    margin-bottom: 10px;
+}
+
+.accordion-btn {
+    background-color: #FCE681;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+}
+
+.accordion-content {
+    display: none;
+    padding: 18px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+.active,
+.accordion:hover .accordion-btn {
+    background-color: #d4b66f;
+}
+
+.nonet {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin:auto
+}
+
+.custom-box {
+    width: 1350px;
+    padding: 20px;
+    border: 3px solid #000000;
+    background-color: #FCE681;
+    margin: 20px;
+    text-align: justify;
+}
+
+.member {
+    width: 20%; /* Make the image take 100% of its container's width */
+    height: 50%; /* Make the image take 100% of its container's height */
+    object-fit: scale-down; /* Ensure the image covers the container while maintaining aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
